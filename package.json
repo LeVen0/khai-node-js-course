@@ -1,0 +1,21 @@
+{
+  "name": "khai-node-js-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeVen0/khai-node-js-course.git"
+  },
+  "keywords": [],
+  "author": "Serhii Ponomarenko",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LeVen0/khai-node-js-course/issues"
+  },
+  "homepage": "https://github.com/LeVen0/khai-node-js-course#readme"
+}
