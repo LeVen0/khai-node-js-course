@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import productRouter from './product/product.router.js';
 import productRoutes from './product.routes.js';
 import userRouter from './user/user.router.js';
 import { logRequest } from './middleware.js';
@@ -10,6 +11,7 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 app.use(logRequest);
+app.use(productRouter);
 app.use(productRoutes);
 app.use(userRouter);
 app.use(errorResponder);

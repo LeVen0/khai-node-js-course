@@ -1,6 +1,7 @@
 import express from 'express';
+import { eq } from 'drizzle-orm';
 import { db } from '../db/index.js';
-import { users } from '../db/schema.js';
+import { products, users } from '../db/schema.js';
 
 const router = express.Router();
 
@@ -17,6 +18,15 @@ router.get('/users', async (request, response) => {
     const allUsers = await db.query.users.findMany();
 
     return response.json(allUsers);
+});
+
+router.get('/users/:id/products', async (request, response) => {
+    const { id } = request.params;
+    const userProducts = await db.query.products.findMany({
+        where: eq(products.userId, Number(id)),
+    });
+
+    return response.json(userProducts);
 });
 
 export default router;
