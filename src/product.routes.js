@@ -1,6 +1,6 @@
-const express = require('express');
-const products = require('./products');
-const { blockSpecialBrand } = require('./middleware');
+import express from 'express';
+import products from './products.js';
+import { blockSpecialBrand } from './middleware.js';
 
 const router = express.Router();
 
@@ -36,4 +36,4 @@ router.get('/productswitherror', (request, response) => {
     throw err;
 });
 
-module.exports = router;
+export default router;

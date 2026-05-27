@@ -1,7 +1,7 @@
-const express = require('express');
-const productRoutes = require('./product.routes');
-const { logRequest } = require('./middleware');
-const { errorResponder } = require('./error.middleware');
+import express from 'express';
+import productRoutes from './product.routes.js';
+import { logRequest } from './middleware.js';
+import { errorResponder } from './error.middleware.js';
 
 const app = express();
 const PORT = 3000;
