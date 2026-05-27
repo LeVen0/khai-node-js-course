@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node src/index.js",
+    "server": "node --watch src/index.js",
     "migration:generate": "drizzle-kit generate:pg",
     "migration:push": "drizzle-kit push:pg",
     "migration:up": "drizzle-kit up:pg"
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/LeVen0/khai-node-js-course#readme",
   "dependencies": {
+    "body-parser": "^2.2.2",
     "drizzle-orm": "^0.30.1",
     "express": "^5.2.1",
     "pg": "^8.11.3"
